@@ -1,0 +1,50 @@
+<%= form_with model: [ @emp, @emp.cards.build ] do |f| %>
+
+
+  <div class="field">
+    <%= f.label :emp_id %>
+    <%= f.text_field :emp_id %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :clm_work_item_id %>
+    <%= f.text_field :clm_work_item_id %>
+    <input id=<%= :clm_work_item_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete">
+  </div>
+  
+  <div class="field">
+    <%= f.label :task_type_id %>
+    <%= f.text_field :task_type_id %>
+    <input id=<%= :task_type_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete">
+  </div>
+  
+
+
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.text_field :start_time , class: 'flatpickr' %>
+    <%= f.time_field  :start_time_t %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :end_time %>
+    <%= f.text_field :end_time , class: 'flatpickr'%>
+    <%= f.time_field  :end_time_t %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.text_field :duration %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end  %>

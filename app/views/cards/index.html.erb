@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Employee ID</th>
+      <th>CLM Work Item</th>
+      <th>Task Type</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Duration</th>
+      <th>Comment</th>
+      <th colspan="12"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.id %></td>
+        <td><%= card.emp_id %></td>
+        <td><%= card.clm_work_item_id %></td>
+        <td><%= card.task_type_id %></td>
+        <td><%= card.start_time %></td>
+        <td><%= card.start_time %></td>
+        <td><%= card.end_time %></td>
+        <td><%= card.duration %></td>
+        <td><%= card.comment %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>

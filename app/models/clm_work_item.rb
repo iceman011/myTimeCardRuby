@@ -1,0 +1,2 @@
+class ClmWorkItem < ApplicationRecord
+end

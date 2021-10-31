@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @card.id %>
+</p>
+
+
+<p>
+  <strong>CLM Work Item :</strong>
+  <%= @card.clm_work_item_id %>
+</p>
+
+<p>
+  <strong>Task Type:</strong>
+  <%= @card.task_type_id %>
+</p>
+
+<p>
+  <strong>Start Time:</strong>
+  <%= @card.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @card.end_time %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @card.duration %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @card.comment %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
+
+<h2>Tests</h2>
+<p id="notice"><%= notice %></p>
+
+<h1>Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Comment</th>
+      <th colspan="12"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @card.tests.each do |card| %>
+      <tr>
+        <td><%= card.id %></td>
+        <td><%= card.comment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= render 'tests/form' %>

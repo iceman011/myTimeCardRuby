@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+  <% if @emp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emp.errors.count, "error") %> prohibited this emp from being saved:</h2>
+
+      <ul>
+      <% @emp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<p>
+  <strong>ID:</strong>
+  <%= @emp.id %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @emp.user_name %>
+</p>
+
+<p>
+  <strong>Employee ID:</strong>
+  <%= @emp.employee_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @emp.role %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @emp.email %>
+</p>
+
+
+<p>
+  <strong>isManager:</strong>
+  <%= @emp.isManager %>
+</p>
+
+<%= link_to 'Edit', edit_emp_path(@emp) %> |
+<%= link_to 'Back', emps_path %>
+
+
+
+<h2>Cards</h2>
+<%= render @emp.cards %>
+<%
+=begin link_to 'New Card', new_emp_card_path , :emp_id => @emp.emp_id 
+=end
+%>
+<%= render 'cards/form' %>
