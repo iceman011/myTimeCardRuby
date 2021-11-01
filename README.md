@@ -18,3 +18,6 @@
 2.6.6- open file "/home/ubuntu/.ssh/id_ed25519.pub" then copy and paste it into github.com->ssh keys
 2.6.7- test SSH connection "ssh -T git@github.com"
 2.6.8- add remote "git remote add master git@github.com:iceman011/myTimeCardRuby.git"
+2.7- merge wat exist on github into newly created rail app 
+2.7.1= "git fetch"
+2.7.2= "git reset --hard origin/master"
