@@ -21,9 +21,12 @@
 2.7- merge wat exist on github into newly created rail app 
 2.7.1= "git fetch"
 2.7.2= "git reset --hard origin/master"
-2.8- auto complete component [https://joelc.io/dynamic-autocomplete-rails-6]
-2.8.1- "yarn add jquery"
-2.8.2- "yarn add easy-autocomplete"
-2.9- calender [https://dzone.com/articles/give-your-dates]
-2.9.1- "yarn add bootstrap jquery popper.js flatpickr"
-2.9.2- "bundle install"
+2.8 create DB and schema fetched from github
+2.8.1 "rails db:create"
+2.8.2 "rails db:schema:load"
+2.9- auto complete component [https://joelc.io/dynamic-autocomplete-rails-6]
+2.9.1- "yarn add jquery"
+2.9.2- "yarn add easy-autocomplete"
+2.10- calender [https://dzone.com/articles/give-your-dates]
+2.10.1- "yarn add bootstrap jquery popper.js flatpickr"
+2.10.2- "bundle install"
