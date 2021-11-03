@@ -30,3 +30,5 @@
 2.10- calender [https://dzone.com/articles/give-your-dates]
 2.10.1- "yarn add bootstrap jquery popper.js flatpickr"
 2.10.2- "bundle install"
+2.11 resolve error webpacker opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ] [https://github.com/webpack/webpack/issues/14532]
+2.11.1- "export NODE_OPTIONS=--openssl-legacy-provider" then rails server

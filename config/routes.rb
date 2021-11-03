@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-#resources :task_types
+    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+    resources :task_types do
+        collection do
+        #get 'task_types/search', to: 'task_types#search'
+        get 'search' #, to: 'task_types#search'
+      end
+    end
+    
+    
+    get 'clm_work_items/search', to: 'clm_work_items#search'
 
-
-get 'task_types/search', to: 'task_types#search'
-get 'clm_work_items/search', to: 'clm_work_items#search'
-
-
-    resources :tasktypes
     resources :clm_work_items
     resources :cards
     resources :emps
