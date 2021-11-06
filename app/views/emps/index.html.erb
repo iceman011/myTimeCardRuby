@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th> Id </th>
       <th>User name</th>
       <th>Employee ID</th>
       <th>Role</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @emps.each do |emp| %>
       <tr>
+        <td><%= emp.id %></td>
         <td><%= emp.user_name %></td>
         <td><%= emp.employee_id %></td>
         <td><%= emp.role %></td>

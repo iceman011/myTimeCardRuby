@@ -10,6 +10,9 @@ class EmpsController < ApplicationController
 
   # GET /emps/1 or /emps/1.json
   def show
+      #if @emp.id != session[:emp_id]
+      #  puts "not allowed"
+      #end
   end
 
   # GET /emps/new
