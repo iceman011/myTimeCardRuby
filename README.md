@@ -39,3 +39,5 @@
 2.22.4- "Card.create(title: “Yeaaa”, emp_id: 1)"
 2.22.5- "rails db:seed"
 2.23- nested resource example [https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application]
+2.24- authentication (login/signup) [https://www.section.io/engineering-education/how-to-setup-user-authentication-from-scratch-with-rails-6/]
+

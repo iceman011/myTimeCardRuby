@@ -1,6 +1,7 @@
 class EmpsController < ApplicationController
   before_action :set_emp, only: %i[ show edit update destroy ]
-
+  skip_before_action :authorized, only: [:new, :create]
+  
   # GET /emps or /emps.json
   def index
     @emps = Emp.all
@@ -25,6 +26,9 @@ class EmpsController < ApplicationController
 
     respond_to do |format|
       if @emp.save
+        
+        session[:emp_id] = @emp.id
+        
         format.html { redirect_to @emp, notice: "Emp was successfully created." }
         format.json { render :show, status: :created, location: @emp }
       else
@@ -64,6 +68,6 @@ class EmpsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def emp_params
-      params.require(:emp).permit(:user_name, :employee_id, :role, :email, :isManager)
+      params.require(:emp).permit(:user_name, :employee_id, :role, :email, :isManager, :password , :password_confirmation)
     end
 end

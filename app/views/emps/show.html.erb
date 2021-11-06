@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_emp.user_name %></h1>
+    <%= button_to 'Logout', logout_path, method: :delete %>
+<% else %>
+    <%= link_to 'Sign Up', sign_up_path %>
+    or
+    <%= link_to 'Login', sign_in_path %>
+<% end %>
+
 
   <% if @emp.errors.any? %>
     <div id="error_explanation">

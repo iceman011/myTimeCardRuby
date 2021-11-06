@@ -10,18 +10,31 @@ Rails.application.routes.draw do
     
     
     get 'clm_work_items/search', to: 'clm_work_items#search'
-
+    
     resources :clm_work_items
-    resources :cards
+    #resources :cards
     resources :emps
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     
-    #root "emps#index"
     root "emps#index"
     
     resources :emps do
         resources :cards
     end
   
+  
+    get 'sign_up', to: 'emps#new'
+    post 'sign_up', to: 'emps#create'
+    
+    get 'sign_in', to: 'sessions#new'
+    post 'sign_in', to: 'sessions#create', as: 'log_in'
+    delete 'logout', to: 'sessions#destroy'
+    
+    get 'password', to: 'passwords#edit', as: 'edit_password'
+    patch 'password', to: 'passwords#update'
+    get 'password/reset', to: 'password_resets#new'
+    post 'password/reset', to: 'password_resets#create'
+    get 'password/reset/edit', to: 'password_resets#edit'
+    patch 'password/reset/edit', to: 'password_resets#update'
 
 end
