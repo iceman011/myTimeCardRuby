@@ -32,3 +32,10 @@
 2.10.2- "bundle install"
 2.11 resolve error webpacker opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ] [https://github.com/webpack/webpack/issues/14532]
 2.11.1- "export NODE_OPTIONS=--openssl-legacy-provider" then rails server
+2.22- Update Schema
+2.22.1-  "rails generate migration AddEmpIdToCards"
+2.22.2- "rails db:migrate"
+2.22.3- "Emp.create(name: “Usher”)"
+2.22.4- "Card.create(title: “Yeaaa”, emp_id: 1)"
+2.22.5- "rails db:seed"
+2.23- nested resource example [https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application]

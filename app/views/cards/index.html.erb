@@ -25,13 +25,17 @@
         <td><%= card.clm_work_item_id %></td>
         <td><%= card.task_type_id %></td>
         <td><%= card.start_time %></td>
-        <td><%= card.start_time %></td>
         <td><%= card.end_time %></td>
         <td><%= card.duration %></td>
         <td><%= card.comment %></td>
-        <td><%= link_to 'Show', card %></td>
-        <td><%= link_to 'Edit', edit_card_path(card) %></td>
-        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Card', card %></td>
+        <td><!-- %= link_to 'Edit', edit_card_path(card) %--></td>
+        <td><%= link_to 'Edit Card', edit_emp_card_path(@emp, card) %></td>
+        <td><%= link_to 'Show Emp', [@emp] %> </td>
+
+        <td><!--%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %--></td>
+        <td><%= link_to 'Destroy Card', [@emp, card], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +43,6 @@
 
 <br>
 
-<%= link_to 'New Card', new_card_path %>
+<%= link_to 'New Card', new_emp_card_path(@emp) %>
+
+<!--%= link_to 'New Card', new_card_path %-->

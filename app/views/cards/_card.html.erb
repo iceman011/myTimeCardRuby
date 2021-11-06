@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <table>
   <thead>
     <tr>
@@ -11,20 +9,30 @@
       <th>End Time</th>
       <th>Duration</th>
       <th>Comment</th>
-      <th colspan="3"></th>
+      <th>Actions</th>
+      <th colspan="9"></th>
     </tr>
   </thead>
-
   <tbody>
-      <tr>
-        <td><%= card.id %></td>
-        <td><%= card.emp_id %></td>
-        <td><%= card.clm_work_item_id %></td>
-        <td><%= card.task_type_id %></td>
-        <td><%= card.start_time %></td>
-        <td><%= card.end_time %></td>
-        <td><%= card.duration %></td>
-        <td><%= card.comment %></td>
-      </tr>
+  
+<!--% if !@emp.cards.blank? %-->
+      <!--% @emp.cards.each do |c| %-->
+          <!--% for c in @emp.cards % -->
+          <!--% puts @emp.cards.size %-->
+          <tr>
+            <td><%= c.id %></td>
+            <td><%= c.emp_id %></td>
+            <td><%= c.clm_work_item_id %></td>
+            <td><%= c.task_type_id %></td>
+            <td><%= c.start_time %></td>
+            <td><%= c.end_time %></td>
+            <td><%= c.duration %></td>
+            <td><%= c.comment %></td>
+            <td><%= link_to 'Edit ', edit_emp_card_path(@emp, c) %></td>
+            <td><%= link_to 'Destroy ', [@emp, c], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <!-- % end % -->
+<!--% else %-->
+<!--% end %-->
   </tbody>
 </table>

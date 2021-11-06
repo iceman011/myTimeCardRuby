@@ -44,14 +44,12 @@
 </p>
 
 <%= link_to 'Edit', edit_emp_path(@emp) %> |
-<%= link_to 'Back', emps_path %>
-
+<%= link_to 'Back', emps_path %> |
+<%= link_to 'Add Card', new_emp_card_path(@emp) %>
 
 
 <h2>Cards</h2>
-<%= render @emp.cards %>
-<%
-=begin link_to 'New Card', new_emp_card_path , :emp_id => @emp.emp_id 
-=end
-%>
-<%= render 'cards/form' %>
+<!--%= render @emp.cards %-->
+<%= render partial: "/cards/card", collection: @emp.cards, as: :c || "There are no cards available."  %>
+
+

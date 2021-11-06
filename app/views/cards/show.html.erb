@@ -36,34 +36,6 @@
   <%= @card.comment %>
 </p>
 
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Edit', edit_emp_card_path(@emp,@card) %> |
+<%= link_to 'Back', emp_cards_path(@emp) %>
 
-<h2>Tests</h2>
-<p id="notice"><%= notice %></p>
-
-<h1>Tests</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Comment</th>
-      <th colspan="12"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @card.tests.each do |card| %>
-      <tr>
-        <td><%= card.id %></td>
-        <td><%= card.comment %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-<%= render 'tests/form' %>
