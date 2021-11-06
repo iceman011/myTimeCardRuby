@@ -11,8 +11,11 @@
   </head>
 
   <body>
+    <%= render partial: "/sessions/emp_status"  %>
+    
      <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
      <%= yield %>
+     
   </body>
 </html>

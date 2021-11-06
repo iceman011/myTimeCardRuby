@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create]
+  skip_before_action :authorized, only: [:new, :create, :root]
+  layout :false
   
   def new
   end
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
   def destroy
     # deletes user session
     session[:emp_id] = nil
-    redirect_to sign_in_path, notice: 'Logged Out'
+    redirect_to root_path, notice: 'Logged Out'
   end
   
 end

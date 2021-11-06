@@ -1,6 +1,7 @@
 class EmpsController < ApplicationController
   before_action :set_emp, only: %i[ show edit update destroy ]
-  skip_before_action :authorized, only: [:new, :create]
+  skip_before_action :authorized, only: [:new, :create, :root]
+  layout :false , only: [:new]
   
   # GET /emps or /emps.json
   def index
