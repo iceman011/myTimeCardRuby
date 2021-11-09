@@ -64,7 +64,7 @@ class CardsController < ApplicationController
     end
     
     def get_emp
-      @emp = Emp.find(params[:emp_id])
+        @emp = Emp.find(params[:emp_id])
     end
     
     # Use callbacks to share common setup or constraints between actions.

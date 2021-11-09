@@ -9,6 +9,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg', '~> 1.1'
 
 gem 'bcrypt', '~> 3.1.7'
+gem "simple-navigation"
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
     before_action :authorized
     helper_method :current_emp
     helper_method :logged_in?
+    helper_method :admin?
 
     #def set_current_emp
       # finds user with session data and stores it if present
@@ -16,15 +17,25 @@ class ApplicationController < ActionController::Base
     #end
     
     def logged_in?
+      Rails.logger.debug  "Ez-logged_in? #{!current_emp.nil?}"
       !current_emp.nil?  
     end
 
+    def admin?
+      true
+    end
     
-    def current_emp    
-      current_emp ||=Emp.find_by(id: session[:emp_id])  
+    def current_emp
+      Rails.logger.debug  "Ez-current_emp->session[emp_id]  #{session[:emp_id]}"
+      if session[:emp_id] != nil
+        return Emp.find_by(id: session[:emp_id])
+      else
+        return nil
+      end
     end
     
     def authorized
+      Rails.logger.debug  'Ez-authorized ' 
       redirect_to root_path unless ( logged_in? and current_permission.allow?(params[:controller], params[:action]) )
     end
 

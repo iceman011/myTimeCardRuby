@@ -28,7 +28,7 @@
         <td><%= card.end_time %></td>
         <td><%= card.duration %></td>
         <td><%= card.comment %></td>
-        <td><%= link_to 'Show Card', card %></td>
+        <td><%= link_to 'Show Card', [card.id] %></td>
         <td><!-- %= link_to 'Edit', edit_card_path(card) %--></td>
         <td><%= link_to 'Edit Card', edit_emp_card_path(@emp, card) %></td>
         <td><%= link_to 'Show Emp', [@emp] %> </td>

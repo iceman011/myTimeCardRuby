@@ -41,3 +41,5 @@
 2.23- nested resource example [https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application]
 2.24- authentication (login/signup) [https://www.section.io/engineering-education/how-to-setup-user-authentication-from-scratch-with-rails-6/]
 2.24.1- authorization [https://levelup.gitconnected.com/simple-authentication-guide-with-ruby-on-rails-16a6255f0be8]
+2.24.1- devise , CanCanCan libaries complete example [https://softwrap.com.br/blog/index.html@p=92.html]
+2.25- adding navigation menu [https://github.com/codeplant/simple-navigation/wiki/Configuration]
