@@ -43,3 +43,6 @@
 2.24.1- authorization [https://levelup.gitconnected.com/simple-authentication-guide-with-ruby-on-rails-16a6255f0be8]
 2.24.1- devise , CanCanCan libaries complete example [https://softwrap.com.br/blog/index.html@p=92.html]
 2.25- adding navigation menu [https://github.com/codeplant/simple-navigation/wiki/Configuration]
+2.26- dynamic/nested form
+2.26.1- survey->question->answer [http://railscasts.com/episodes/196-nested-model-form-part-1?autoplay=true]
+2.26.2.- bulk insert [https://www.bigbinary.com/blog/bulk-insert-support-in-rails-6]

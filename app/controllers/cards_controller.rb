@@ -10,6 +10,12 @@ class CardsController < ApplicationController
     
     def new 
        @card = @emp.cards.build
+       
+        2.times do
+          entry = @card.entries.build
+          #4.times { question.answers.build }
+        end
+  
     end 
     
     def create

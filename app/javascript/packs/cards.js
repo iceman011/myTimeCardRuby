@@ -42,6 +42,15 @@ $(document).on("turbolinks:load", function () {
         console.log("New value " + current);
     });
   
+    $('.remove_link').click(function() {
+    //$('*[.remove_link]').on("click", function(data){
+        // Some complex code
+        alert($(this));
+          $(this).previous("input[type=hidden]").value = "1";
+          $(this).up(".fields").hide();
+    
+        return false;
+      });
   
 });
 
@@ -100,3 +109,18 @@ $('*[id= "task_type_id"]').change(function(){
   alert($(this).val());
 });
 */
+
+
+
+function remove_fields(link) {
+  $(link).previous("input[type=hidden]").value = "1";
+  $(link).up(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).up().insert({
+    before: content.replace(regexp, new_id)
+  });
+}
