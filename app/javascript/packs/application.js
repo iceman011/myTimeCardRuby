@@ -28,4 +28,3 @@ import flatpickr from "flatpickr";
 
 require("../stylesheets/application.scss")
 
-

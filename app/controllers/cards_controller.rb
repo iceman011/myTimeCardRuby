@@ -26,8 +26,9 @@ class CardsController < ApplicationController
       #puts @emp.id
       #@emp.cards.create!(card_params)
       #redirect_to emp_path(@emp)
-      @card = @emp.cards.build(card_params)
-      
+     
+      #@card = @emp.cards.build(card_params)
+      @card = Card.new(card_params)
       respond_to do |format|
         if @card.save
           format.html { redirect_to emp_path(@emp), notice: 'Card was successfully created.' }
@@ -66,7 +67,9 @@ class CardsController < ApplicationController
     private
     
     def card_params
-      params.require(:card).permit(:emp_id, :clm_work_item_id, :task_type_id, :start_time, :end_time, :duration, :comment)
+
+      params.require(:card).permit(:emp_id, :clm_work_item_id, :task_type_id, :start_time, :end_time, :duration, :comment , 
+      { entries_attributes: [ :_destroy, :card_id, :clm_work_item_id, :task_type_id, :start_time, :end_time, :duration, :comment]} )
     end
     
     def get_emp

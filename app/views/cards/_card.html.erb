@@ -36,3 +36,7 @@
 <!--% end %-->
   </tbody>
 </table>
+
+<h2>Entries</h2>
+<!--%= render @emp.cards %-->
+<%= render partial: "/cards/entry", collection: c.entries , as: :e || "There are no entries available."  %>

@@ -46,3 +46,4 @@
 2.26- dynamic/nested form
 2.26.1- survey->question->answer [http://railscasts.com/episodes/196-nested-model-form-part-1?autoplay=true]
 2.26.2.- bulk insert [https://www.bigbinary.com/blog/bulk-insert-support-in-rails-6]
+2.27.1- JS changed but not updated in runtime "rake assets:clobber" then "bundle exec rake assets:precompile"

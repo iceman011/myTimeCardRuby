@@ -38,16 +38,17 @@ $(document).on("turbolinks:load", function () {
         var prev = $(this).data('val');
         var current = $(this).val();
         
-        console.log("Prev value " + prev);
-        console.log("New value " + current);
+        //console.log("Prev value " + prev);
+        //console.log("New value " + current);
+        //console.log($('.remove_link') );
     });
   
     $('.remove_link').click(function() {
     //$('*[.remove_link]').on("click", function(data){
         // Some complex code
-        alert($(this));
-          $(this).previous("input[type=hidden]").value = "1";
-          $(this).up(".fields").hide();
+        //alert($(this));
+          $(this).prev("input[type=hidden]").value = "1";
+          $(this).parent(".fields").hide();
     
         return false;
       });
@@ -111,7 +112,7 @@ $('*[id= "task_type_id"]').change(function(){
 */
 
 
-
+/*
 function remove_fields(link) {
   $(link).previous("input[type=hidden]").value = "1";
   $(link).up(".fields").hide();
@@ -124,3 +125,4 @@ function add_fields(link, association, content) {
     before: content.replace(regexp, new_id)
   });
 }
+*/

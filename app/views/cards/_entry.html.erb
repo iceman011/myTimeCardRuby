@@ -1,0 +1,39 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Card ID</th>
+      <th>CLM Work Item</th>
+      <th>Task Type</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Duration</th>
+      <th>Comment</th>
+      <th>Actions</th>
+      <th colspan="9"></th>
+    </tr>
+  </thead>
+  <tbody>
+  
+<!--% if !@emp.cards.blank? %-->
+      <!--% @emp.cards.each do |c| %-->
+          <!--% for c in @emp.cards % -->
+          <!--% puts @emp.cards.size %-->
+          <tr>
+            <td><%= e.id %></td>
+            <td><%= e.card_id %></td>
+            <td><%= e.clm_work_item_id %></td>
+            <td><%= e.task_type_id %></td>
+            <td><%= e.start_time %></td>
+            <td><%= e.end_time %></td>
+            <td><%= e.duration %></td>
+            <td><%= e.comment %></td>
+            
+            <td><!-- %= link_to 'Edit ', edit_emp_card_entry_path(@emp, c) % --></td>
+            <td><!-- %= link_to 'Destroy ', [@emp, c], method: :delete, data: { confirm: 'Are you sure?' } %-- ></td>
+          </tr>
+      <!-- % end % -->
+<!--% else %-->
+<!--% end %-->
+  </tbody>
+</table>

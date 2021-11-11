@@ -1,4 +1,4 @@
-<p class="fields">
+<div class="fields">
   
   <div class="field">
     <%= f.label :clm_work_item_id %>
@@ -37,12 +37,12 @@
     <%= f.text_field :comment %>
   </div>
   
-  <%= f.hidden_field :_destroy %>
-  <%= f.label :_destroy, "Remove Entry" %>
   
+  <%= f.label :_destroy, "Remove Entry" %>
+  <%= f.hidden_field :_destroy %>
   <!-- %= link_to_function "remove", "remove_fields(this)" %-->
-  <%= link_to "remove",  class: "remove_link" %>
+  <%= link_to "remove", {href: '#'}, class: "remove_link" %>
 
 
 
-</p>
+</div>
