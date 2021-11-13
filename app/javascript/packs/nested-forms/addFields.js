@@ -1,3 +1,5 @@
+import flatpickr from "flatpickr";
+
 // app/javascript/packs/nested-forms/addFields.js
 class addFields {
   // This executes when the function is instantiated.
@@ -32,11 +34,11 @@ class addFields {
     let newFields = regexp ? link.dataset.fields.replace(regexp, time) : null
     // Add the new markup to the form if there are fields to add.
     newFields ? link.insertAdjacentHTML('beforebegin', newFields) : null
+    
+    flatpickr("[class='flatpickr']", {})
   }
 }
 
 // Wait for turbolinks to load, otherwise `document.querySelectorAll()` won't work
-window.addEventListener('turbolinks:load', () => new addFields() , 
-    $('[data-tooltip-display="true"]').tooltip(),
-    flatpickr("[class='flatpickr']", {})
+window.addEventListener('turbolinks:load', () => new addFields()
 )

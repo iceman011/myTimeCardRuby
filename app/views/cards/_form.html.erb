@@ -2,8 +2,10 @@
 
 <%= form_with(model: [@emp, card], local: true) do |f| %>
 
+<div id="card_form_fields">
 <fieldset>
 
+  
   <div class="field">
     <%= f.label :emp_id %>
     <%= f.text_field :emp_id %>
@@ -52,8 +54,9 @@
   <% end %>
   
   <p><%= link_to_add_fields "Add Entry", f, :entries %></p>
-  
+
 </fieldset>
+</div>
 
   <div class="actions">
     <%= f.submit %>

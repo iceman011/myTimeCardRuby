@@ -5,6 +5,26 @@ document.addEventListener("turbolinks:load", () => {
 });
 
 
+const observer = new MutationObserver(function(mutations_list) {
+	mutations_list.forEach(function(mutation) {
+		mutation.addedNodes.forEach(function(added_node) {
+			//if(added_node.id == 'child') {
+			
+      			$('[id$=_start_time]').on("change", function(data){
+              //alert($(this).val());
+              update_card_duration($(this));
+            });
+        
+				console.log('#child has been added');
+				observer.disconnect();
+			//}
+		});
+	});
+});
+observer.observe(document.querySelector("#card_form_fields"), { subtree: true, childList: true });
+//observer.observe(document, { subtree: false, childList: true });
+//observer.observe($('[id=card_form_fields]'), { subtree: false, childList: true });
+x
 
 $(document).on("turbolinks:load", function () {
 
