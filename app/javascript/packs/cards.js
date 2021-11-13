@@ -8,8 +8,10 @@ document.addEventListener("turbolinks:load", () => {
 
 $(document).on("turbolinks:load", function () {
 
-  
-  $('*[id= "card_start_time"]').on("change", function(data){
+    
+  //$('*[id= "card_start_time"]').on("change", function(data){
+  //$('*[id= "card_entries_attributes_\d_start_time"]').on("change", function(data){
+  $('[id$=_start_time]').on("change", function(data){
     //alert($(this).val());
     update_card_duration($(this));
   });
@@ -19,7 +21,7 @@ $(document).on("turbolinks:load", function () {
     update_card_duration($(this));
   });
   
-  $('*[id= "card_end_time"]').on("change", function(data){
+  $('*[id= "card_entries_attributes_\d_end_time"]').on("change", function(data){
     //alert($(this).val());
     update_card_duration($(this));
   });
@@ -48,15 +50,29 @@ $(document).on("turbolinks:load", function () {
         // Some complex code
         //alert($(this));
           $(this).prev("input[type=hidden]").value = "1";
-          $(this).parent(".fields").hide();
+          $(this).parent(".nested-fields").hide();
     
         return false;
       });
+      
+    /*function add_fields(link, association, content) {
+      var new_id = new Date().getTime();
+      var regexp = new RegExp("new_" + association, "g")
+      
+      alert($(link).parent().id)
+      
+      $(link).parent().insert({
+        before: content.replace(regexp, new_id)
+      });
+    }*/
+
   
 });
 
 
 function update_card_duration (changed_field){
+    
+    alert(changed_field.id)
     
     var start_date_val = $('*[id= "card_start_time"]').val();
     var start_date = new Date(  start_date_val == null || start_date_val == '' ? '01/01/1900' : start_date_val  );

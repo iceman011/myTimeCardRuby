@@ -27,4 +27,4 @@ import flatpickr from "flatpickr";
 
 
 require("../stylesheets/application.scss")
-
+require('./nested-forms/addFields')

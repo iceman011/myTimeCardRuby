@@ -45,5 +45,7 @@
 2.25- adding navigation menu [https://github.com/codeplant/simple-navigation/wiki/Configuration]
 2.26- dynamic/nested form
 2.26.1- survey->question->answer [http://railscasts.com/episodes/196-nested-model-form-part-1?autoplay=true]
-2.26.2.- bulk insert [https://www.bigbinary.com/blog/bulk-insert-support-in-rails-6]
+2.26.2- bulk insert [https://www.bigbinary.com/blog/bulk-insert-support-in-rails-6]
+2.26.3- nested form from scratch [https://stevepolito.design/blog/create-a-nested-form-in-rails-from-scratch/]
 2.27.1- JS changed but not updated in runtime "rake assets:clobber" then "bundle exec rake assets:precompile"
+2.27.2- empty webpack folder auto [https://bloggie.io/@_ChristineOo/housekeeping-the-webpacker-packs-folder]
