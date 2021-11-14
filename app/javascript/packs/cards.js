@@ -105,8 +105,8 @@ function update_card_duration (changed_field){
     var end_date_val = $(end_date_str).val();
     var end_date = new Date(  end_date_val == null || end_date_val == '' ? '01/01/2900' : end_date_val  );
     
-    var start_time_val = ($('[id= "card_start_time_t"]').length == 0 ? '00:00:00' : $('[id= "card_start_time_t"]').val());
-    var end_time_val =  ( $('[id= "card_end_time_t"]').length == 0 ? '00:00:00' : $('[id= "card_end_time_t"]').val());
+    var start_time_val = ($('[id= "card_start_time_t"]').length == 0 ? '00:00' : $('[id= "card_start_time_t"]').val());
+    var end_time_val =  ( $('[id= "card_end_time_t"]').length == 0 ? '00:00' : $('[id= "card_end_time_t"]').val());
     
     var start = new Date ( start_date.getFullYear() , start_date.getMonth(), start_date.getDate() , start_time_val.substring(0, start_time_val.indexOf(':')), start_time_val.substring(start_time_val.indexOf(':')+1) );
     var end = new Date ( end_date.getFullYear() , end_date.getMonth(), end_date.getDate() , end_time_val.substring(0, end_time_val.indexOf(':')), end_time_val.substring(end_time_val.indexOf(':')+1) );

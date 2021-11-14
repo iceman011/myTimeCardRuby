@@ -69,7 +69,7 @@ class CardsController < ApplicationController
     def card_params
 
       params.require(:card).permit(:emp_id, :clm_work_item_id, :task_type_id, :start_time, :end_time, :duration, :comment , 
-      { entries_attributes: [ :_destroy, :card_id, :clm_work_item_id, :task_type_id, :start_time, :end_time, :duration, :comment]} )
+      { entries_attributes: [ :_destroy, :card_id, :clm_work_item_id, :task_type_id, :start_time, :start_time_t , :end_time, :end_time_t, :duration, :comment]} )
     end
     
     def get_emp
