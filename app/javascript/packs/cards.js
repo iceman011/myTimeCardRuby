@@ -88,11 +88,13 @@ function init_card (){
 
 function update_card_duration (changed_field){
     
-    changed_field = changed_field.target.id
-    var id = changed_field.substring(changed_field.indexOf("attributes_")+11,changed_field.indexOf("_start_time"));
-    var start_date_str = '*[id= "card_entries_attributes_'+id+'_start_time"]';
-    var end_date_str = '*[id= "card_entries_attributes_'+id+'_end_time"]';
-    var duration_str = '*[id= "card_entries_attributes_'+id+'_duration"]';
+    changed_field = changed_field.target == null ? changed_field[0].id : changed_field.target.id;
+    //var id = changed_field.substring(changed_field.indexOf("attributes_")+11,changed_field.indexOf("_start_time"));
+    var id = changed_field.slice(changed_field.search(/[0-9]/),changed_field.search(/[0-9]_/)+1);
+    
+    var start_date_str = ( id == "") ? '*[id= "card_start_time"]' : '*[id= "card_entries_attributes_'+id+'_start_time"]';
+    var end_date_str = ( id == "") ? '*[id= "card_end_time"]' : '*[id= "card_entries_attributes_'+id+'_end_time"]';
+    var duration_str = ( id == "") ? '*[id= "card_duration"]' : '*[id= "card_entries_attributes_'+id+'_duration"]';
     //alert(id);
     
     //alert(start_date + ' ' + end_date + ' ' + start_time + ' ' + end_time + ' '+date_diff + ' ' + time_diff);
