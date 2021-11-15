@@ -35,7 +35,10 @@ class addFields {
     // Add the new markup to the form if there are fields to add.
     newFields ? link.insertAdjacentHTML('beforebegin', newFields) : null
     
-    flatpickr("[class='flatpickr']", {})
+    flatpickr("[class='flatpickr']", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+    })
   }
 }
 

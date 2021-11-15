@@ -11,8 +11,32 @@ class CardsController < ApplicationController
     def new 
        @card = @emp.cards.build
        
-        1.times do
+       default_start = Date.today.beginning_of_week(start_day = :sunday)
+       default_end = Date.today.beginning_of_week(start_day = :sunday)
+       
+       default_start = Time.zone.at(default_start.to_time).to_datetime
+       default_end = Time.zone.at(default_end.to_time).to_datetime
+       default = Date.today
+
+       default_start = default_start.change(hour: 8)
+       default_end = default_end.change(hour: 16)
+       
+       @card.start_time = default_start
+        5.times do
           entry = @card.entries.build
+          entry.start_time = default_start
+          entry.end_time = default_end
+          
+          
+          
+          entry.duration = ((default_end- default_start) * 24 ).round
+          #byebug
+          
+
+          #puts default_end.to_s() + ' ' + default_start.to_s() 
+          
+          default_start = default_start + 1
+          default_end = default_end + 1
           #4.times { question.answers.build }
         end
   
