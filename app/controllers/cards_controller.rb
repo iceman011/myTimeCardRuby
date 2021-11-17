@@ -16,7 +16,6 @@ class CardsController < ApplicationController
        
        default_start = Time.zone.at(default_start.to_time).to_datetime
        default_end = Time.zone.at(default_end.to_time).to_datetime
-       default = Date.today
 
        default_start = default_start.change(hour: 8)
        default_end = default_end.change(hour: 16)
@@ -29,7 +28,8 @@ class CardsController < ApplicationController
           
           
           
-          entry.duration = ((default_end- default_start) * 24 ).round
+          diff = ((default_end- default_start) * 24 ).round 
+          entry.duration = '0d '+ diff.to_s + 'h 0m'
           #byebug
           
 

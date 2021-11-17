@@ -86,7 +86,8 @@ function init_card (){
     		});
     	});
     });
-    observer.observe(document.querySelector("#card_form_fields"), { subtree: true, childList: true });
+    if( document.querySelector("#card_form_fields") != null )
+      observer.observe(document.querySelector("#card_form_fields"), { subtree: true, childList: true });
 }
 
 function update_card_duration (changed_field){

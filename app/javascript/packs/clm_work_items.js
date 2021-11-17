@@ -1,8 +1,8 @@
 $(document).on('turbolinks:load', function() {
     
     
-    //$input = $('*[data-behavior="autocomplete"]')
-    $input = $('*[id= "clm_work_item_id"][type="search"]')
+    $input = $('*[data-behavior="autocomplete"]')
+    //$input = $('*[id= "clm_work_item_id"][type="search"]')
 
     var options = {
         url: function(phrase) {
@@ -13,9 +13,9 @@ $(document).on('turbolinks:load', function() {
         list: {
 
                    onClickEvent: function() {
-                        selected_clm_work_item_id = $('*[id= "clm_work_item_id"][type="search"]').getSelectedItemData().id;
+                        //selected_clm_work_item_id = $('*[id= "clm_work_item_id"][type="search"]').getSelectedItemData().id;
                     //alert( $('*[data-behavior="autocomplete"]').getSelectedItemData().id );
-                        $('*[id = "card_clm_work_item_id"]').val(selected_clm_work_item_id);
+                       // $('*[id = "card_clm_work_item_id"]').val(selected_clm_work_item_id);
                     }
                 }
 

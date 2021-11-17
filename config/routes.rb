@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       end
     end
     
-    
+    get 'task_types/search', to: 'task_types#search'
     get 'clm_work_items/search', to: 'clm_work_items#search'
     
     resources :clm_work_items

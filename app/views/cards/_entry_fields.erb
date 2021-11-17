@@ -4,14 +4,15 @@
   
   <div class="field">
     <%= f.label :clm_work_item_id %>
-    <%= f.text_field :clm_work_item_id %>
-    <input id=<%= :clm_work_item_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete">
+    <!-- %= f.text_field :clm_work_item_id %--!>
+    <!-- input id=< %= :clm_work_item_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete" --!>
+    <%= f.text_field :clm_work_item_id , type: "search" , data: { behavior: "autocomplete" } %>
   </div>
   
   <div class="field">
     <%= f.label :task_type_id %>
-    <%= f.text_field :task_type_id %>
-    <input id=<%= :task_type_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete">
+    <%= f.text_field :task_type_id , type: "search" , data: { behavior: "autocomplete" } %>
+    <!-- input id=< %= :task_type_id % > type="search" placeholder="Enter name..." data-behavior="autocomplete"-->
   </div>
   
 

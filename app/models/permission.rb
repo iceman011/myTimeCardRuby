@@ -9,12 +9,14 @@ class Permission < Struct.new(:emp)
     if emp
       return true if controller == "emps" && action.in?(%w[show edit update])
       return true if controller == "cards" && action.in?(%w[index new create show edit update])
+      return true if controller == "task_types" && action.in?(%w[search])
       #return true if controller == "topics" && action != "destroy"
       #return true if user.admin?
     end
     if emp.role == 0
       return true if controller == "emps" && action.in?(%w[index new create show edit update destory])
-      return true if controller == "task_types" && action.in?(%w[index new show edit update destory])
+      return true if controller == "cards" && action.in?(%w[index new create show edit update destroy])
+      return true if controller == "task_types" && action.in?(%w[index new search show edit update destory])
       return true if controller == "clm_workitem_types" && action.in?(%w[index new show edit update destory])
     end
     false

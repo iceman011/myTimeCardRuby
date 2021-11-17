@@ -2,9 +2,10 @@
 $(document).on('turbolinks:load', function() {
     
     
-    //$input = $('*[data-behavior="autocomplete"]')
-    $input = $('*[id= "task_type_id"][type="search"]')
-
+    $input = $('*[data-behavior="autocomplete"]')
+    //$input = $('*[type="search"]')
+    //alert($input);
+    
     var options = {
         url: function(phrase) {
         return "/task_types/search.json?q=" + phrase;
@@ -14,9 +15,9 @@ $(document).on('turbolinks:load', function() {
         list: {
 
                    onClickEvent: function() {
-                        selected_task_type_id = $('*[id= "task_type_id"][type="search"]').getSelectedItemData().id;
+                        //selected_task_type_id = $('*[id= "task_type_id"][type="search"]').getSelectedItemData().id;
                     //alert( $('*[data-behavior="autocomplete"]').getSelectedItemData().id );
-                        $('*[id = "card_task_type_id"]').val(selected_task_type_id);
+                       // $('*[id = "card_task_type_id"]').val(selected_task_type_id);
                     }
                 }
 

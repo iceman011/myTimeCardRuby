@@ -51,4 +51,5 @@
 2.27.2- empty webpack folder auto [https://bloggie.io/@_ChristineOo/housekeeping-the-webpacker-packs-folder]
 2.28- monitor space
 2.28.1- get top10 folders in all the system size [du -shx /* | sort -rh | head]
-2.28.1- get top10 folders in current folder [du -shx */ | sort -rh | head]
+2.28.2- get top10 folders in current folder [du -shx */ | sort -rh | head]
+2.28.3- [sudo du -a ./ | sort -n -r | head -n 20]
