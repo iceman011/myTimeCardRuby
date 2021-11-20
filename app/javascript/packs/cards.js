@@ -64,15 +64,15 @@ function init_card (){
         //console.log($('.remove_link') );
     });
   
-    $('.remove_link').click(function() {
+    //$('.remove_link').click(function() {
     //$('*[.remove_link]').on("click", function(data){
         // Some complex code
         //alert($(this));
-          $(this).prev("input[type=hidden]").value = "1";
-          $(this).parent(".nested-fields").hide();
+        //  $(this).prev("input[type=hidden]").value = "1";
+        //  $(this).parent(".nested-fields").hide();
     
-        return false;
-      });
+        //return false;
+      //});
       
       
       const observer = new MutationObserver(function(mutations_list) {

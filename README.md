@@ -27,6 +27,7 @@
 2.9- auto complete component [https://joelc.io/dynamic-autocomplete-rails-6]
 2.9.1- "yarn add jquery"
 2.9.2- "yarn add easy-autocomplete"
+2.9.3- complete guide [http://easyautocomplete.com/guide]
 2.10- calender [https://dzone.com/articles/give-your-dates]
 2.10.1- "yarn add bootstrap jquery popper.js flatpickr"
 2.10.2- "bundle install"
@@ -53,3 +54,4 @@
 2.28.1- get top10 folders in all the system size [du -shx /* | sort -rh | head]
 2.28.2- get top10 folders in current folder [du -shx */ | sort -rh | head]
 2.28.3- [sudo du -a ./ | sort -n -r | head -n 20]
+2.28.4- empty folders [/lib/modules/] [/var/log/journal/ec2e5a67e40fcf4afaf2686e9c3956e7][~/environment/timecardapp/tmp/cache/bootsnap/compile-cache][/var/cache/apt]

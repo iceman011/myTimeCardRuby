@@ -4,15 +4,14 @@
   
   <div class="field">
     <%= f.label :clm_work_item_id %>
-    <!-- %= f.text_field :clm_work_item_id %--!>
-    <!-- input id=< %= :clm_work_item_id %> type="search" placeholder="Enter name..." data-behavior="autocomplete" --!>
-    <%= f.text_field :clm_work_item_id , type: "search" , data: { behavior: "autocomplete" } %>
+    <%= f.text_field :clm_work_item_id , type: "search" , data: { behavior: "autocomplete-clm-work-items" } %>
+    <%= f.hidden_field :clm_work_item_id %>
   </div>
   
   <div class="field">
     <%= f.label :task_type_id %>
-    <%= f.text_field :task_type_id , type: "search" , data: { behavior: "autocomplete" } %>
-    <!-- input id=< %= :task_type_id % > type="search" placeholder="Enter name..." data-behavior="autocomplete"-->
+    <%= f.text_field :task_type_id , type: "search" , data: { behavior: "autocomplete-clm-task-types" } %>
+    <%= f.hidden_field :task_type_id %>
   </div>
   
 
@@ -42,10 +41,10 @@
   </div>
   
   
-  <%= f.label :_destroy, "Remove Entry" %>
-  <%= f.hidden_field :_destroy %>
+  <%= f.label :task_type_id, "Remove Entry" %>
+  <%= f.hidden_field :_destroy , class: "remove_fields" %>
   <!-- %= link_to_function "remove", "remove_fields(this)" %-->
-  <%= link_to "remove", {href: '#'}, class: "remove_link" %>
+  <%= link_to "remove" , {href: '#'}, class: "remove_fields" , id: :task_type_id %>
 
 
 
